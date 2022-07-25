@@ -1,0 +1,19 @@
+<Project>
+	<ItemGroup Condition="'$(PkgPath)' != ''">
+		<Compile Remove="$(PkgPath)/AstraBase/Assemblies/**" />
+		<Compile Remove="$(PkgPath)/AstraBase/Data/**" />
+		<Compile Remove="$(PkgPath)/AstraBase/SqlScripts/**" />
+		<Compile Remove="$(PkgPath)/AstraBase/Schemas\**" />
+		<Compile Remove="$(PkgPath)/AstraBase/Resources/**" />
+		<EmbeddedResource Remove="$(PkgPath)/AstraBase/Assemblies/**" />
+		<EmbeddedResource Remove="$(PkgPath)/AstraBase/Data/**" />
+		<EmbeddedResource Remove="$(PkgPath)/AstraBase/SqlScripts/**" />
+		<EmbeddedResource Remove="$(PkgPath)/AstraBase/Schemas/**" />
+		<EmbeddedResource Remove="$(PkgPath)/AstraBase/Resources/**" />
+		<None Remove="$(PkgPath)/AstraBase/Assemblies/**" />
+		<None Remove="$(PkgPath)/AstraBase/Data/**" />
+		<None Remove="$(PkgPath)/AstraBase/SqlScripts/**" />
+		<None Remove="$(PkgPath)/AstraBase/Schemas/**" />
+		<None Remove="$(PkgPath)/AstraBase/Resources/**" />
+  </ItemGroup>
+</Project>

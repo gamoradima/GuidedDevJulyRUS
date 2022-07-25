@@ -1,0 +1,17 @@
+﻿{
+  "Descriptor": {
+    "UId": "3cd4defe-4d30-1a00-6fdc-2a8d5b06288a",
+    "Name": "AstraBase",
+    "Type": 1,
+    "ModifiedOnUtc": "\/Date(1658235256000)\/",
+    "Maintainer": "Customer",
+    "ProjectPath": "Files/AstraBase.csproj",
+    "DependsOn": [
+      {
+        "UId": "70209c27-1e12-21cb-f833-92a6f7d1a4e2",
+        "Name": "PartnerWork",
+        "Type": 1
+      }
+    ]
+  }
+}
