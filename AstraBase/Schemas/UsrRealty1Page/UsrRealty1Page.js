@@ -6,6 +6,22 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"dataValueType": Terrasoft.DataValueType.BOOLEAN,
 				"type": Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
 				"value": false
+			},
+			"CommissionUSD": {
+				dataValueType: Terrasoft.DataValueType.FLOAT,
+				type: Terrasoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				value: 0.0,
+				dependencies: [
+					{
+						columns: ["UsrPriceUSD", "UsrOfferType"],
+						methodName: "calculateCommission"
+					}
+				]
+			},
+			"UsrOfferType": {
+				lookupListConfig: {
+					columns: ["UsrCommissionMultiplier"]
+				}
 			}
 		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
@@ -16,6 +32,14 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"filter": {
 					"masterColumn": "Id",
 					"detailColumn": "UsrRealty"
+				}
+			},
+			"UsrRealtyVisitContainer": {
+				"schemaName": "UsrRealtyVisitDetailGrid",
+				"entitySchemaName": "UsrRealtyVisit",
+				"filter": {
+					"detailColumn": "UsrParentRealty",
+					"masterColumn": "Id"
 				}
 			}
 		}/**SCHEMA_DETAILS*/,
@@ -70,6 +94,19 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
+			calculateCommission: function() {
+				var price = this.get("UsrPriceUSD");
+				if (!price) {
+					price = 0;
+				}
+				var offerTypeObject = this.get("UsrOfferType");
+				var multiplier = 0;
+				if (offerTypeObject) {
+					multiplier = offerTypeObject.UsrCommissionMultiplier;
+				}
+				var commission = price * multiplier;
+				this.set("CommissionUSD", commission);
+			},
 			onMyButtonClick: function() {
 				//
 				this.console.log("Кнопка была нажата, да.");
@@ -81,7 +118,8 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			},
 			onEntityInitialized: function() {
 				this.callParent(arguments);
-				this.getSysAdminOperationStatus();	
+				this.getSysAdminOperationStatus();
+				this.calculateCommission();
 			},
 			getSysAdminOperationStatus: function() {
 				RightUtilities.checkCanExecuteOperation({ operation: "CanEditRealtyOwner" }, this.getSysAdminOperationCallback, this);
@@ -148,13 +186,34 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			},
 			{
 				"operation": "insert",
-				"name": "PrimaryContactButton",
+				"name": "CommissionControl",
 				"values": {
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
 						"column": 0,
 						"row": 3,
+						"layoutName": "ProfileContainer"
+					},
+					"bindTo": "CommissionUSD",
+					"enabled": false,
+					"caption": {
+						"bindTo": "Resources.Strings.CommissionCaption"
+					}
+				},
+				"parentName": "ProfileContainer",
+				"propertyName": "items",
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "MyButton",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 4,
 						"layoutName": "ProfileContainer"
 					},
 					"itemType": 5,
@@ -171,7 +230,7 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -251,10 +310,10 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			},
 			{
 				"operation": "insert",
-				"name": "NotesAndFilesTab",
+				"name": "Tab8bac15cbTabLabel",
 				"values": {
 					"caption": {
-						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
+						"bindTo": "Resources.Strings.Tab8bac15cbTabLabelTabCaption"
 					},
 					"items": [],
 					"order": 0
@@ -262,6 +321,31 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"parentName": "Tabs",
 				"propertyName": "tabs",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "UsrRealtyVisitContainer",
+				"values": {
+					"itemType": 2,
+					"markerValue": "added-detail"
+				},
+				"parentName": "Tab8bac15cbTabLabel",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "NotesAndFilesTab",
+				"values": {
+					"caption": {
+						"bindTo": "Resources.Strings.NotesAndFilesTabCaption"
+					},
+					"items": [],
+					"order": 1
+				},
+				"parentName": "Tabs",
+				"propertyName": "tabs",
+				"index": 1
 			},
 			{
 				"operation": "insert",
@@ -319,7 +403,7 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				"operation": "merge",
 				"name": "ESNTab",
 				"values": {
-					"order": 1
+					"order": 2
 				}
 			}
 		]/**SCHEMA_DIFF*/

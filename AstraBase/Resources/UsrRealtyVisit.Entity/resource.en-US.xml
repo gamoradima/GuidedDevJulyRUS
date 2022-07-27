@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Просмотр недвижимости" />
+			<Item Name="Columns.UsrComment.Caption" Value="Комментарий" />
+			<Item Name="Columns.UsrManager.Caption" Value="Менеджер" />
+			<Item Name="Columns.UsrParentRealty.Caption" Value="Родительская недвижимость" />
+			<Item Name="Columns.UsrPotentialCustomer.Caption" Value="Потенциальный клиент" />
+			<Item Name="Columns.UsrVisitDatetime.Caption" Value="Дата/Время просмотра" />
+			<Item Name="EventsProcessSchema.Caption" Value="Бизнес-процесс" />
+		</Items>
+	</Group>
+</Resources>

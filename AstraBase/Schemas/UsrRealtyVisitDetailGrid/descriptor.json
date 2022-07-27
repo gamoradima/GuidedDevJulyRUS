@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "ffc71edf-05be-4ba2-b557-b5f425c48f66",
+    "Name": "UsrRealtyVisitDetailGrid",
+    "ModifiedOnUtc": "\/Date(1658924393000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Схема реестра детали: \"Просмотры недвижимости\""
+  }
+}
