@@ -22,6 +22,24 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				lookupListConfig: {
 					columns: ["UsrCommissionMultiplier"]
 				}
+			},
+			"UsrOwner": {
+				dataValueType: Terrasoft.DataValueType.LOOKUP,
+				lookupListConfig: {
+                    /* Массив фильтров, которые применяются к запросу для формирования данных поля-справочника. */
+                    "filters": [
+                        function() {
+                            var filterGroup = Ext.create("Terrasoft.FilterGroup");
+							var subFilters = this.Terrasoft.createFilterGroup();
+							subFilters.addItem(this.Terrasoft.createColumnFilterWithParameter(
+								this.Terrasoft.ComparisonType.EQUAL, "UsrParentRealty", this.get("Id")));
+
+							var filter = Terrasoft.createExistsFilter("[UsrRealtyVisit:UsrManager:Id].Id", subFilters); 
+							filterGroup.add("MainFilter", filter);
+                            return filterGroup;
+                        }
+                    ]
+                }
 			}
 		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
@@ -94,6 +112,21 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 			}
 		}/**SCHEMA_BUSINESS_RULES*/,
 		methods: {
+			positiveValueValidator: function(value, column) {
+				var msg = "";
+				if (value < 0) {
+					msg = this.get("Resources.Strings.ValueMustBeGreaterThanZero");
+				}
+				return {
+					invalidMessage: msg
+				};
+			},
+            setValidationConfig: function() {
+                /* Вызывает инициализацию валидаторов родительской модели представления. */
+                this.callParent(arguments);
+                this.addColumnValidator("UsrPriceUSD", this.positiveValueValidator);
+                this.addColumnValidator("UsrArea", this.positiveValueValidator);
+            },
 			calculateCommission: function() {
 				var price = this.get("UsrPriceUSD");
 				if (!price) {
@@ -108,7 +141,12 @@ define("UsrRealty1Page", ["RightUtilities"], function(RightUtilities) {
 				this.set("CommissionUSD", commission);
 			},
 			onMyButtonClick: function() {
-				//
+				var obj = {
+					value: "000c1f72-5c09-4ded-8581-92fb2ba61178",
+					displayValue: this.get("Resources.Strings.Kvartira")
+				};
+				this.set("UsrType", obj);
+				
 				this.console.log("Кнопка была нажата, да.");
 				this.showInformationDialog("Эта кнопка была точно нажата!");
 			},

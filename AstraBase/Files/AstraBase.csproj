@@ -114,6 +114,9 @@
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
+		<Reference Include="Terrasoft.Configuration">
+			<HintPath>..\..\..\bin\Terrasoft.Configuration.dll</HintPath>
+		</Reference>
 		<Reference Include="Terrasoft.Core">
 			<HintPath>$(CoreLibPath)/Terrasoft.Core.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
@@ -239,8 +242,8 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup Label="Package References">
-		<Reference Include="PartnerWork">
-			<HintPath>$(RelativePkgFolderPath)/PartnerWork/$(StandalonePackageAssemblyPath)/PartnerWork.dll</HintPath>
+		<Reference Include="Terrasoft.Configuration">
+			<HintPath>$(RelativePkgFolderPath)/../bin/Terrasoft.Configuration.dll</HintPath>
 			<SpecificVersion>False</SpecificVersion>
 			<Private>False</Private>
 		</Reference>
