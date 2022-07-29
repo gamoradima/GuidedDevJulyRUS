@@ -2,10 +2,8 @@
   "Descriptor": {
     "UId": "70209c27-1e12-21cb-f833-92a6f7d1a4e2",
     "Name": "PartnerWork",
-    "Type": 1,
-    "ModifiedOnUtc": "\/Date(1658235000000)\/",
+    "ModifiedOnUtc": "\/Date(1659013598000)\/",
     "Maintainer": "Customer",
-    "ProjectPath": "Files/PartnerWork.csproj",
     "Description": "Предполагаемый пакет для разработок партнёра.",
     "DependsOn": [
       {

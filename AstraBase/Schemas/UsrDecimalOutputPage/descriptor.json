@@ -1,0 +1,13 @@
+﻿{
+  "Descriptor": {
+    "UId": "9dd36105-c9da-4909-9685-db39c42aeb9e",
+    "Name": "UsrDecimalOutputPage",
+    "ModifiedOnUtc": "\/Date(1659098663000)\/",
+    "Parent": {
+      "UId": "5826ff24-46c6-4169-9223-2aaad9ec2e18",
+      "Name": "BasePageSimpleProcessTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Страница вывода дробного числа"
+  }
+}

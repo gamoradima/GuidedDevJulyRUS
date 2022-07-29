@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "c9a980d3-be16-4a00-9081-dd237d6463d5",
+    "Name": "UsrCalcAveragePriceProcess",
+    "ModifiedOnUtc": "\/Date(1659098944000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Расчет средней цены недвижимости",
+    "DependsOn": []
+  }
+}
