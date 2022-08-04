@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.DeleteDataUserTask1.Caption" Value="Очистить справочник цен золота" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.ConsiderTimeInFilter.Caption" Value="Учитывать время в фильтре" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.DataSourceFilters.Caption" Value="Фильтры источника данных" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.EntitySchemaId.Caption" Value="Объект" />
+			<Item Name="BaseElements.DeleteDataUserTask1.Parameters.IsMatchConditions.Caption" Value="Объект должен соответствовать условиям" />
+			<Item Name="BaseElements.StartEvent1.Caption" Value="Начало" />
+			<Item Name="BaseElements.SubProcess1.Caption" Value="Подпроцесс сохранения курса золота 1" />
+			<Item Name="BaseElements.SubProcess1.Parameters.CompletedIterationsCount.Caption" Value="Число выполненных экземпляров" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.Caption" Value="Входящая коллекция записей" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.DisplayValue" Value="[#https://link.idbanking.am 1.CashSellList#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.ProcessSchemaParameter1.Caption" Value="Вес" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.ProcessSchemaParameter1.DisplayValue" Value="[#https://link.idbanking.am 1.CashSellList:Weight#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.RateParameter.Caption" Value="Цена дробное" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.RateStrParameter.Caption" Value="Цена" />
+			<Item Name="BaseElements.SubProcess1.Parameters.InputRecordCollection.RateStrParameter.DisplayValue" Value="[#https://link.idbanking.am 1.CashSellList:Rate#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OutputRecordCollection.Caption" Value="Исходящая коллекция записей" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OutputRecordCollection.RateParameter.Caption" Value="Цена дробное" />
+			<Item Name="BaseElements.SubProcess1.Parameters.TerminatedIterationsCount.Caption" Value="Число прерванных экземпляров" />
+			<Item Name="BaseElements.SubProcess1.Parameters.TotalIterationsCount.Caption" Value="Общее число экземпляров" />
+			<Item Name="BaseElements.TerminateEvent1.Caption" Value="Это конец!" />
+			<Item Name="BaseElements.WebService1.Caption" Value="https://link.idbanking.am 1" />
+			<Item Name="BaseElements.WebService1.Parameters.RequestBody.Caption" Value="Тело запроса сервиса" />
+			<Item Name="BaseElements.WebService1.Parameters.Response.Caption" Value="Тело ответа сервиса" />
+			<Item Name="BaseElements.WebService1.Parameters.StatusCode.Caption" Value="Http код состояния" />
+			<Item Name="BaseElements.WebService1.Parameters.Success.Caption" Value="Успешно выполнен" />
+			<Item Name="BaseElements.WebService1.Parameters.UsrCSList_Out.Caption" Value="CashSellList" />
+			<Item Name="BaseElements.WebService1.Parameters.UsrCSList_Out.UsrCSLRate_Out.Caption" Value="Rate" />
+			<Item Name="BaseElements.WebService1.Parameters.UsrCSList_Out.UsrCSLWeight_Out.Caption" Value="Weight" />
+			<Item Name="Caption" Value="Главный процесс получения курса золота" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Заголовок экземпляра процесса" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Название процесса#]" />
+		</Items>
+	</Group>
+</Resources>

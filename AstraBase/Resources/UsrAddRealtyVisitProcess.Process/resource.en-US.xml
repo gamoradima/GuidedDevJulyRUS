@@ -2,6 +2,7 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="BaseElements.AddDataUserTask2.Caption" Value="добавить просмотр" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.ConsiderTimeInFilter.Caption" Value="Consider time in the filter" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.ConsiderTimeInFilter.DisplayValue" Value="true" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.DataSourceFilters.Caption" Value="Data source filters" />
@@ -12,11 +13,16 @@
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordDefValues.Value.55011a3c-01f3-421a-b70c-e86ca31cb577.displayValue" Value="добавлено с помощью процесса" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordDefValues.Value.55011a3c-01f3-421a-b70c-e86ca31cb577.value" Value="добавлено с помощью процесса" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordId.Caption" Value="Created record Id" />
+			<Item Name="BaseElements.FormulaTask1.Caption" Value="N = N - 1" />
+			<Item Name="BaseElements.StartEvent1.Caption" Value="начало" />
+			<Item Name="BaseElements.TerminateEvent1.Caption" Value="это конец!" />
 			<Item Name="Caption" Value="Процесс добавления просмотров недвижимости" />
 			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Заголовок экземпляра процесса" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Название процесса#]" />
+			<Item Name="Parameters.ProcessSchemaParameter1.Caption" Value="Кол-во просмотров" />
+			<Item Name="Parameters.ProcessSchemaParameter1.DisplayValue" Value="5" />
 			<Item Name="Parameters.RealtyIdParameter.Caption" Value="Id недвижимости" />
 		</Items>
 	</Group>

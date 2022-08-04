@@ -6,6 +6,7 @@
 			<Item Name="LocalizableStrings.CommissionCaption.Value" Value="Комиссия, USD" />
 			<Item Name="LocalizableStrings.Kvartira.Value" Value="1. Apartment" />
 			<Item Name="LocalizableStrings.MyButtonCaption.Value" Value="Моя кнопка!" />
+			<Item Name="LocalizableStrings.RunWebServiceButtonCaption.Value" Value="Запуск сервиса" />
 			<Item Name="LocalizableStrings.Tab8bac15cbTabLabelTabCaption.Value" Value="Просмотры" />
 			<Item Name="LocalizableStrings.UsrRealtyVisitContainerDetailCaptionOnPage.Value" Value="Просмотр недвижимости" />
 			<Item Name="LocalizableStrings.ValueMustBeGreaterThanZero.Value" Value="Значение должно быть больше нуля." />

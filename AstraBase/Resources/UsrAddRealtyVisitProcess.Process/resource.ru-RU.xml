@@ -13,6 +13,9 @@
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordDefValues.Value.55011a3c-01f3-421a-b70c-e86ca31cb577.displayValue" Value="добавлено с помощью процесса" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordDefValues.Value.55011a3c-01f3-421a-b70c-e86ca31cb577.value" Value="добавлено с помощью процесса" />
 			<Item Name="BaseElements.AddDataUserTask2.Parameters.RecordId.Caption" Value="Id созданной записи" />
+			<Item Name="BaseElements.ConditionalSequenceFlow1.Caption" Value="N &gt; 0" />
+			<Item Name="BaseElements.DefaultSequenceFlow1.Caption" Value="конец цикла" />
+			<Item Name="BaseElements.FormulaTask1.Caption" Value="N = N - 1" />
 			<Item Name="BaseElements.StartEvent1.Caption" Value="начало" />
 			<Item Name="BaseElements.TerminateEvent1.Caption" Value="это конец!" />
 			<Item Name="Caption" Value="Процесс добавления просмотров недвижимости" />
@@ -20,6 +23,8 @@
 			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
 			<Item Name="NotificationCaption.Caption" Value="Заголовок экземпляра процесса" />
 			<Item Name="NotificationCaption.DisplayValue" Value="[#Название процесса#]" />
+			<Item Name="Parameters.ProcessSchemaParameter1.Caption" Value="Кол-во просмотров" />
+			<Item Name="Parameters.ProcessSchemaParameter1.DisplayValue" Value="5" />
 			<Item Name="Parameters.RealtyIdParameter.Caption" Value="Id недвижимости" />
 		</Items>
 	</Group>
